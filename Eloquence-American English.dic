@@ -74,7 +74,7 @@ OK	okay	1	1
 deja	`[.1de.2Zx]	0	2
 toed	tode	0	0
 begawk	`[.0bX.1gck]	0	0
-http://	ht `0 t p `0 colon `0 slash `0 slash	0	0
+http://	ht `0 t p `0 colon `0 slash `0 slash 	0	0
 https://	ht teepee s `0 colon `0 slash `0 slash 	0	0
 c:\	c ̀0 colon ̀0 backslash 	0	0
 2001	`0 twenty `0 o 1	0	2
@@ -93,9 +93,6 @@ flummox	flummuhx	0	0
 Nico	Neeko	0	2
 omegle	`[.0x.1mi.0gxl]	0	0
 wifi	wi ̀0 fi	0	0
-  dialog	,  ̀0 window,	0	0
-  combo box	  combo ̀0 box	0	0
-*.*	* ̀0 dot *	0	0
 winamp	`[.1wIn.0Amp]	0	0
 www.	www ̀0 dot 	0	0
 /	 ̀0 slash 	0	0
@@ -199,7 +196,7 @@ markup	mark ̀0 up	0	0
 .gblorb	  ̀0 dot g ̀0 blorb 	0	0
 .glulx	 ̀0 dot glulx 	0	0
 github	git ̀0 hub 	0	0
-.con	 ̀0 dot con 	0	0
+.con	 ̀0 dot con	0	0
 .css	 ̀0 dot css 	0	0
 .xhtml	 ̀0 dot x ̀0 h ̀0 t ̀0 m l 	0	0
 xmpp	x ̀0 m pp 	0	0
@@ -212,7 +209,7 @@ songr	songer	0	0
 gmail	g ̀0 mail 	0	0
 mousepad	mouse pad 	0	0
 panicy	panicky 	0	0
-dvoriac	de voriac 	0	0
+dvorak	de vorak	0	0
 redhead	red ̀0 hed 	0	0
 feathy	fehðy	0	0
 o.w.l	o ̀0 w l 	0	0
@@ -234,7 +231,7 @@ bandcamp	band ̀0 camp	0	0
 paypal	pay ̀0 pal	0	0
 .skype	 ̀0 dot skype 	0	0
 eirs	air's	0	2
-eirself	`00 `[.1Er.2sElf]	0	0
+eirself	`00 `[.1Er.2sElf]	0	2
 jeirself	`00 `[.1JEr.2sElf]	0	2
 neirself	`00 `[.1nEr.2sElf]	0	2
 peh's	pay's	0	2
@@ -333,9 +330,7 @@ iframe	i `0 frame 	0	0
 soyourelikethat	so you are like that	0	0
 (	`vb60 	0	0
 )	 `vb65	0	0
-  window	  ̀0 window	0	0
   grouping	  ̀0 group	0	0
-  edit	  ̀0 text	0	2
   link	  ̀0 link	0	0
 PM	 ̀0 p m	0	2
 AM	 ̀0 A M	1	2
@@ -467,7 +462,7 @@ gulab jamon	goolaab jaaman	0	0
 shitpost	shit `0 post	0	0
 schwiftpost	shwift `0 post	0	0
 hailee	`[.1he.0li]	0	0
-Gallifrey	`[.1gAl.0x.2fre]	0	0
+Gallifrey	`[.1gAl.0x.2fre]	0	2
 Gallifreyan	`[.0gAl.0x.1fre.0Xn]	0	0
 genderqueer	gender queer	0	0
 genderfluid	gender fluid	0	0
@@ -541,7 +536,7 @@ enjolras	`[.1cn.1Zxl.1ra]	0	0
 anarcho	`[.1An.0ar.0ko]	0	0
 bangarang	`[.1bAG.0x.2rAG]	0	0
 altair	`[.0cl.1tEr]	0	2
-Leong	`[.0le.1cG]	0	0
+Leong	`[.0le.1cG]	0	2
 mentat	`[.1mEn.0tAt]	0	2
 christy	`[.1krI.0sti]	0	0
 hoptoad	`[.1hap.2tod]	0	0
@@ -553,7 +548,7 @@ plumbus	`[.1plHm.0bxs]	0	0
 plumbuses	`[.1plHm.0bxs.0xz]	0	0
 Leslie's	`[.1lEz.0liz]	0	0
 Shosha	`[.1So.0Sx]	0	2
-Mohrenschildt 	morron `0 shilt	0	0
+Mohrenschildt 	morron `0 shilt	0	2
 McLelland	`[.0mXk.1lEl.0xnd]	0	2
 conchord	`[.1kan.2kcrd]	0	2
 conchords	`[.1kan.2kcrdz]	0	0
@@ -676,7 +671,7 @@ vodafone	voda `0 phone	0	0
 Kezia	kezzia	0	2
 wiremu	`[.1wI.0Fx.2mu]	0	2
 nakuhashi	`[.0na.0kx.1ha.0Si]	0	2
-esperanto	`[.0Es.0px.1ran.0to]	0	0
+esperanto	`[.0Es.0px.1ran.0to]	0	2
 Hola	ola	0	2
 worldgate	world `0 gate	0	0
 macaw	`[.0mXk.1c]	0	2
@@ -748,7 +743,7 @@ sewer	sooer	0	0
 nannuzzi	`[.0nX.1nut.0si]	0	0
 Gandalf	`[.1gAn.2dElf]	0	0
 staphylococcal	`[.0stA.2fXl.0x.1ka.0kxl]	0	0
-alma	`[.1cl.0mx]	0	0
+alma	`[.1cl.0mx]	0	2
 defoliate	`[.0di.1fo.0li.2et]	0	0
 osteopathy	`[.2c.0sti.1a.0px.0Ti]	0	0
 ethnographer	`[.0ET.1na.0grx.0fR]	0	0
@@ -873,7 +868,7 @@ blindsight	blind `0 sight	0	0
 verisign	verry `0 sign	0	0
 loretech	lore `0 tech	0	0
 codyy	cody	0	2
-alexa	alecksa	0	0
+alexa	alecksa	0	2
 grabaseat	grabba `0 seat	0	0
 SCP	S `0 C P	0	0
 Siodhachan 	Sheeya `0 haan	0	0
@@ -886,13 +881,13 @@ abra	aabra	0	2
 marshmello	marshmallow	0	0
 p!nk	pink	0	0
 newschool	new `0 school	0	0
-althida	`[.1cl.0TX.2Fx]	0	0
+altheda	`[.1cl.0TX.2Fx]	0	0
 antifa	`[.1An.0ti.2fA]	0	2
 ruapekapeka	`0 rua pekka `0 pekka	0	2
 Mihingarangi 	`[.0mX1hIG.0x.2FaG.0i] 	0	0
 Darian	Darion	0	2
 omaru	`[.0c.0ma.1ru] 	0	0
-McVries	`[.0mxk.1vrYz]	0	0
+McVries	`[.0mxk.1vriz]	0	0
 squaded	squadded	0	2
 squading	squadding	0	2
 whoreson	whore `0 son	0	0
@@ -934,6 +929,111 @@ pansexual	`0 pan sexual	0	2
 neuron	`[.1nyR.2an]	0	2
 neuron's	`[.1nyR.02anz]	0	2
 neurons	`[.1nyR.2anz]	0	2
-repo	ree `0 po	0	0
+repo	ree `0 po	0	2
 "	 `p100 	0	0
 c:\users\root\	 `0 tilda	0	0
+Poihipi	poi `0 heepy	0	0
+playlist	play `00 list	0	0
+Afroman	Afro `0 man	0	0
+deltorian	`[.0dEl.1tor.0iXn] 	0	0
+Lorelei	`[.1lcr.0x.2lY]	0	2
+smartinhaler	smart inhaler	0	0
+Hagerty	Haggerty	0	0
+tumblr	tumbler	0	0
+barnswallow	barn `0 swallow	0	0
+Procopides	`[.0pro.0kx.1pi.0diz]	0	0
+Emange	`[0.0Em.1AnJ]	0	2
+Notre Dame	`[.0no.0trx.1dam]	0	2
+regexp	reg exp	0	0
+theirself	 `00 `[.1DEr.2sElf] 	0	1
+gaga	`[.1ga.2ga]	0	2
+HarperCollins	Harper Collins	1	0
+FedEx	Fed Ex	1	0
+userbox	user `0 box	0	0
+Mediawiki	Media `0 wiki	0	0
+m*a*s*h	Mash	0	0
+Enobaria	`[.0i.0nx.1ba.0rix]	0	2
+watchlist	watch `0 list	0	0
+MoS	m `0 o s	1	2
+MOS	m `0 o s	1	2
+U.S	US	1	0
+Gambon	`[.1gAm.0ban]	0	2
+mater	`[.1ma.0tR]	0	2
+sql	 s `0 q l	0	0
+html	 h `0 t `0 m l 	0	0
+rdbms	 r `0 d b `0 m s 	0	0
+BSD	 b `0 s d	0	0
+SSL	 `0 s `0 s l	0	0
+CSS	 c `0 s s	0	0
+web server	web `0 server	0	0
+web host	web `0 host	0	0
+World Wide Web	world `0 wide web	0	0
+Clickthrough	click `0 through	0	0
+CeCe	`[.1si.00si]	1	2
+Peniston	penniston	0	2
+.md	 `0 dot m d 	0	0
+aspie	 `[.1As.0pi]	0	2
+Walmart	wal `00 mart	0	0
+whois	who is 	0	0
+namecheap	`1 names `0 cheap	0	0
+localhost	local `0 host 	0	0
+metamint	metam `0 mint 	0	0
+mkrdir	`00 m `00 k dir 	0	0
+debian	`[.1dEb.0i.0Xn]	0	0
+PhpMyAdmin	PHP my admin	0	0
+PuTTY	Pu `00 t `00 t y 	1	0
+OpenSSH	open ssh 	0	0
+wget	 w `0 get	0	0
+.deb	 `0 dot deb	0	0
+nameserver	name `0 server	0	0
+Debian's	`[.1dEb.0i.0Xnz]	0	0
+RSA	R S A 	1	0
+eInk	E `0 Ink	0	0
+snapchat	snap `0 chat	0	0
+htaccess	h t access 	0	0
+NumPY	Num `0 py	0	0
+IfModule	 iff `0 module 	1	0
+sysadmin	syss `0 admin	0	0
+memcache	mem `0 cache	0	0
+wikicache	wiki `0 cache	0	0
+xinetd	zi `00 net d 	0	0
+nethome	net `0 home	0	0
+Raspbian	`[.1rAs.0bi.0Xn]	0	2
+Certbot	cert `0 bot	0	0
+.metamint.net	 `0 dot metamint.net 	0	0
+batchcommand	batch `0 command	0	0
+bashrc	bash rc	0	0
+eval	e `00 val	0	2
+getopts	get `0 opts	0	0
+readonly	read oanly	0	0
+umask	u `0 mask	0	0
+printf	print f	0	0
+ulimit	u `0 limit	0	0
+uname	u `0 name	0	0
+rlogin	r login	0	0
+sigint	sigg `0 int	0	0
+sigterm	sig `0 term	0	0
+histfile	hist `0 file	0	0
+ctrl+	control 	0	0
+crlf	c `0 r `0 l f	0	0
+SIGHUP	sig `0 hup	0	0
+huponexit	hup on exit	0	0
+\#!	hash exclaim 	0	0
+xtrace	x `0 trace	0	0
+magdalena	`[.0mAg.0dx.1le.0nx]	0	2
+wgetrc	w `0 get `0 r c 	0	0
+centOS	cent os 	0	0
+coreOS	core os 	0	0
+smarthost	smart `0 host	0	0
+oddfellow	 `[.1ad.0fE.0lo] 	0	0
+labeledby	labeled by	0	0
+describedby	described by	0	0
+tabindex	 `[.1tAb.0In.00dEks] 	0	0
+ANZ	Eh `00 n zed	0	0
+gameplan	game `0 plan	0	0
+motd	m o t d	0	2
+copyleft	copy `0 left	0	0
+GNU	`[.00gX.1nu]	1	2
+sftp://	s f `0 t p `0 colon `0 slash `0 slash 	0	0
+imap://	i `0 map `0 colon `0 slash `0 slash 	0	0
+smtp://	s `0 m `0 t p `0 colon `0 slash `0 slash 	0	0
