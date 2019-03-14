@@ -11,7 +11,7 @@ import synthDriverHandler, os, config, re, Queue, nvwave, threading, logging
 from logHandler import log
 from synthDriverHandler import SynthDriver,VoiceInfo,BooleanSynthSetting
 from synthDriverHandler import SynthDriver,VoiceInfo,NumericSynthSetting
-import _eloquence
+import _ECI as _eloquence
 import languageHandler
 from collections import OrderedDict
 minRate=40
@@ -81,8 +81,8 @@ langsAnnotations={
 
 class SynthDriver(synthDriverHandler.SynthDriver):
  supportedSettings=(SynthDriver.VoiceSetting(), SynthDriver.VariantSetting(), SynthDriver.RateSetting(), SynthDriver.PitchSetting(),SynthDriver.InflectionSetting(),SynthDriver.VolumeSetting(), NumericSynthSetting("hsz", "Head Size"), NumericSynthSetting("rgh", "Roughness"), NumericSynthSetting("bth", "Breathiness"), BooleanSynthSetting("backquoteVoiceTags","Enable backquote voice &tags", True), BooleanSynthSetting("ABRDICT","Enable &abbreviation dictionary", False))
- description='ETI-Eloquence'
- name='eloquence'
+ description='ETI-Eloquence (YATES)'
+ name='eloquence_YATES'
  speakingLanguage=""
  @classmethod
  def check(cls):

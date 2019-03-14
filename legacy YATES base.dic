@@ -181,56 +181,31 @@ bigender	bi `0 gender	0	0
 maryse	mey `0 `[rXs]	0	2
 shadowhunter	shadow `0 hunter	0	0
 shadowhunting	shadow `0 hunting	0	0
-inquisitor	inquizitor	0	0
 pennyroyal	penny `0 royal	0	0
 TE	T E	1	2
-decrow	de crow	0	0
 DID	d i d	1	2
-uber	oober	0	0
 tienjing	tien jing	0	0
-odin	odan	0	2
-batmunhk	`[.1bat.0mUGk]	0	0
 arkangel	arc `0 angel	0	0
-aviatrix	avia `0 trix	0	0
-aviatrices	avia `0 `[.1trX.0siz]	0	0
-voldemort	volda `0 mort	0	0
-anus	aynus	0	0
-yeah	`[.1yEx]	0	0
 detune	`0 dee tune	0	0
-polux	`[.1pal.0xks]	0	0
-#Hurtz
-\b(\d+)\s?hz\b	\1hurtz	0	1
-#Kilahurts
-\b(\d+)\s?KHZ\b	\1Kilahurtz	0	1
-#Megahurtz
-\b(\d+)\s?MHZ\b	\1megahurtz	0	1
-#Gigahurtz
-\b(\d+)\s?GHZ\b	\1Gigahurtz	0	1
+#Hertz
+\b([0-9,.]+)\s?hz\b	\1 hertz	0	1
+#Kilohertz
+\b([0-9.]+)\s?KHz\b	\1 kilohertz	0	1
+#Megahertz
+\b([0-9.]+)\s?MHz\b	\1 megahertz	0	1
+#Gigahertz
+\b([0-9.]+)\s?GHz\b	\1 gigahertz	0	1
 #kilometers per hour
 \b(\d+)\s?KM(\p|/)h?\b	\1kilometers per hour	0	1
-XI	 11 	0	2
-XII	 12 	0	2
 iframe	i `0 frame 	0	0
 soyourelikethat	so you are like that	0	0
-(	`vb60 	0	0
-)	 `vb65	0	0
   grouping	  `0 group	0	0
   link	  `0 link	0	0
 PM	 `0 p m	0	2
 AM	 `0 A M	1	2
   tool bar	  `0 tool `0 bar	0	0
-  blank		0	0
 xorg	X `0 org	0	0
 xargs	x `0 args	0	0
-alexandra	`[.0Al.0Xg.1zAn.0drx]	0	2
-alexandria	`0 `[.0Al.1xgz] andria	0	0
-alexandrov	`0 `[.0Al.1xgz] androv	0	0
-Calliope	`[.0kX.1lY.0x.2pi]	0	0
-  property page	  properties	0	0
-kiwiness	`[.1ki.0wi.2nxs]	0	0
-benedict	`[.1bEn.0x.2dIkt]	0	2
-cumberbatch	`[.1kHm.0bR.2bAC]	0	0
-isopropyl	`[.1Ys.0x.1pro.2pxl]	0	0
 helium-3	`0 helium 3 	0	0
 helium-4	`0 helium 4 	0	0
 uranium-235	uranium 2 `0 30 5 	0	0
@@ -239,11 +214,9 @@ carbon-12	`0 carbon 12	0	0
 carbon-13	`0 carbon 13 	0	0
 carbon-14	`0 carbon 14 	0	0
 uranium-239	uranium 2 `0 30 9 	0	0
-isotope	aisa `0 tope	0	0
 half-life	half `0 life	0	2
 half-lives	half `0 lyves	0	2
 (s)	s	0	0
-formulae	`[.1fcrm.0yx.2le]	0	2
 copresence	co `0 presence	0	2
 wang-mu	`0 wahng moo	0	0
 Han Fei-tzu	`0 `[.han] `1 `[.1fe.2tsx]	0	0
@@ -251,126 +224,52 @@ Han Qing-jao	`0 `[.han] `[.0CiG.1JyW]	0	0
 Li Qing-jao	`āl `[.li] `[.0CiG.1JyW]	0	0
 Hegemon	`[.1hEJ.0x.2man]	0	2
 Qing-jao	`[.0CiG.1JyW]	0	0
-aiúa	`0 ai ooa	0	0
 Os Filhos da Mente de Cristo	`l7 Os Filhos da Mente de Cristo `l1 	0	0
-filhos	`[.1fil.2yos]	0	0
-Estevão	`[.0EsdE.1vWG]	0	0
-jakt	yaakt	0	0
-hegemony	`[.0hX.1JE.0mx.2ni]	0	2
-samoan	`[.0sx.1moXn]	0	2
-tonga	`[.1ta.0Gx]	0	2
-tongan	`[.1ta.0Gxn]	0	2
-fijian	`[.0fi.1Ji.0xn]	0	2
-tongans	`[.1ta.0Gxnz]	0	2
 Lumana'i	`[.1lu.0mx.1na.0?i]	0	2
 na'vi	`[.1na.0?vi]	0	2
-fritschle	`[.1fritS.0lx]	0	2
-plikt	pleekt	0	0
 themself	`0 `[.0Dxm.1sElf]	0	2
-mycroft	`[.1mY.2krcft]	0	0
-lestrade	le straad	0	0
-samoans	`[.0sx.1moXnz]	0	2
-eduardo	edwardo	0	2
-hia	haia	0	2
-selfie	selfy	0	2
-selfies	sellfeez	0	2
-mendez	`[.1mEn.0dEz]	0	0
-whanau	`[.1fa.0no]	0	0
-umatilla	`0 ooma tilla	0	2
-kanyia	`[.0kx.1nYx]	0	2
-stefani	stefiny	0	2
-kaikoura	`[.0kY.1ko] `0 `[.rx]	0	2
-Kaikōura 	`[.0kY.1ko] `0 `[.rx]	0	2
-halsey	`[.1hAl.0zi]	0	2
-ariana	`[.1a.0ri.1a.0nx]	0	2
-grande	graanday	0	2
-fraser	frazer	0	2
-eminem	`[.1Em.0Xn.2Em]	0	2
-martinez	`[.0mar.1ti.0nEz]	0	2
 opensouls	open souls	0	2
 Ott	O T T	1	2
 PYT	P Y T	1	2
 dosbox	dos `0 box	0	0
 OitNB	O I T N B	1	2
-audy	owdy	0	2
-dodecahedron	`[.1do.0dE.0kx.1hi.2dran]	0	2
-dodecahedrons	`[.1do.0dE.0kx.1hi.2dranz]	0	0
-zaphod	zayfod	0	0
-dani	danny	0	0
 CCing	`0 see seeing	0	0
 hunger games	hunger `0 games	0	0
-beetee	beety	0	0
 mockingjay	mocking `0 jay	0	0
-holo	hollo	0	2
-avox	`[.1e.2vaks]	0	2
-avoxes	`[.1e.0vak.0sXz]	0	2
 tracker jacker	trackerjacker	0	0
-sydenham	sidnam	0	0
-wannabe	wana be	0	0
-cassidee	casidy	0	0
-clara	claara	0	0
-plutarch	plu `0 tark	0	0
 chch	Christchurch	0	0
 ACL	Auckland	1	2
-cupros	coo `0 pross	0	0
-motueka	`[.1mc.0tu.1e.0kx]	0	0
 Ǵecko 	gecko	0	0
-geckoson	`[.1gE.0ko.0sXn]	0	0
-nichole	`[.0nX.1kol]	0	0
-allee	`0 ah lee	0	0
-micah	meeka	0	0
 milkshake	milk `0 shake	0	0
-sheehan	`[.1Si.0han]]	0	0
-ratliff	`[.1rAt.0lIf]	0	0
 rehab	re `0 hab	0	0
-terronez	`[.0tE.1ro.0nEz]	0	0
-ngo	`[.1Go]	0	2
-Flyorra	`[.0fli.1cr.0x]	0	0
 awww	auw	0	0
-malcy	`[.1mAl.0ki]	0	2
 Supercalifragilisticexpialidocious	super `0 kalla frajjalistic `0 expi `0 allih docious	0	0
-Seguin	Segwin	0	0
-kamelot	`[.1kAm.0x.2lat]	0	0
 xb1	Crossbar 1	0	2
 xb5	Crossbar 5	0	2
 \#1A	1 eh 	0	2
 ESS	E S S	1	2
-Wegener	wayghner	0	0
-Tiffani	tifany	0	0
 inworld	inn `0 world	0	0
 outworld	out `0 world	0	0
 in world	inn `0 world	0	0
 out world	out `0 world	0	0
-pentatonix	`[.0pEn.0tx.1tan.0Xks]	0	0
 gulab jamon	goolaab jaaman	0	0
 shitpost	shit `0 post	0	0
 schwiftpost	shwift `0 post	0	0
-hailee	`[.1he.0li]	0	0
-Gallifrey	`[.1gAl.0x.2fre]	0	2
-Gallifreyan	`[.0gAl.0x.1fre.0Xn]	0	0
 genderqueer	gender queer	0	0
 genderfluid	gender fluid	0	0
 #mix
 \bMx\.\s	`00 mix 	0	1
-Loveys	Luvvies	0	0
 Mao Mao	Mao `0 Mao	0	0
-Windser	Winzer	0	0
 dryad	dry `0 add	0	0
-Charisse	shereese	0	0
-kimy	kimmy	0	0
 bichord	bi `0 chord	0	0
 trichord	tri `0 chord	0	0
 feath	feð	0	2
 snapdragon	snap `0 dragon	0	0
-misha	meesha	0	2
-rhys	reese	0	0
 javascript	java `0 script	0	0
 xor	x `0 or	0	0
 common room	common `0 room	0	0
 Xbox	x `0 box	0	0
 chuizai	tshway `0 zai	0	0
-Caraml	caramel	0	0
-douche	doosh	0	2
 douchecanoe	doosh canoe	0	2
 douchecannon	doosh `0 cannon	0	2
 douchebag	doosh `0 bag	0	2
@@ -379,41 +278,13 @@ bojack	bo `0 jack	0	2
 les miserables	`as lay `af `[.0mIz.0X.1ra.0blx]	0	0
 nzherald	n zed herald	0	0
 Coca-Cola	`0 coca cola	0	2
-manurewa	`0 maanu raywa	0	0
 Dunedin	`0 dun Eden	0	0
-marama	`[.1ma.0rx.2ma]	0	0
-dozenth	Duzzenth	0	2
-tenancy	tennency	0	0
-tenancies	tennencies	0	0
+loveys	luvvies	0	2
+tenancy	tennency	0	2
+tenancies	tennencies	0	2
 tenancy agreement	tennency `0 agreement	0	2
-sophocles	`[.1saf.0x.2kliz]	0	0
-hamartia	`[.0hx.0mar.1tix]	0	0
-tardyon	`[.1tard.0i.2an]	0	2
-tachyon	`[.1tAk.0i.2an]	0	2
-meson	`[.1mi.0zan]	0	2
-gluon	`[.1glu.0an]	0	2
-tachyons	`[.1tAk.0i.2anz]	0	2
-tardyons	`[.1tar.0di.2anz]	0	2
-gluons	`[.1glu.0anz]	0	2
-mesons	`[.1mi.0zanz]	0	2
-castiel	`[.0kAs.0ti.1El]	0	0
 goddamnit	goddamn it	0	0
-Daenerys	`[.0dX.1nEr.0Xs]	0	0
-Dison	`[.1dY.0sxn]	0	2
-moana	`[.0mx.1wa.0nx]	0	0
-Larouche	le roosh	0	2
-tatiana	`[.0tat.0i.1a.0nx]	0	0
-economides	`ad  `[.0Xk.1an.0x1mi.0dEs]	0	0
-bunion	`[.1bHn.0yXn]	0	0
-Pinham	`[.1pIn.0Xm]	0	0
-Jono	Jonno	0	0
-Nikau	Neeko	0	0
-nanotwinned	`[.1nAn.0o.2twYnd]	0	0
-nitride	`[.1nYt.2rYd]	0	0
-flamethrower	`[.1flem.2TroR]	0	0
-zucced	zucked	0	0
-zuccing	zucking	0	0
-Leslie	`[.1lEz.0li]	0	0
+economides	`ad  `[.0Xk.1an.0x1mi.0dEs]
 Havasnack	`[.1hAv.0x.2snAk]	1	0
 javert	`[.0Zx1vEr]	0	0
 enjolras	`[.1cn.1Zxl.1ra]	0	0

@@ -124,7 +124,7 @@ class eciThread(threading.Thread):
 
 def eciCheck():
  global eciPath
- eciPath=os.path.abspath(os.path.join(os.path.dirname(__file__), r"eloquence\eci.dll"))
+ eciPath=os.path.abspath(os.path.join(os.path.dirname(__file__), r"ECI\eci.dll"))
  iniCheck()
  return os.path.exists(eciPath)
 
