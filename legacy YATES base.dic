@@ -1,82 +1,32 @@
-﻿#Crash|Commonword
-\b(\w+[bdflmnrvzqh])hes(\w+)\b	\1 hes\2	0	1
-#crazy number bug fixer
-(\d):(\d\d[snrt][tdh])	\1 \2	0	1
-#apostrophe stopper1
-(\w)'(\w\w)'(\w)	\1 \2 \3	0	1
-#apostrophe stopper2
-(\w)'(\w)'(\w\w)	\1 \2 \3	0	1
-#if the aftermath of the number bug fixer happens to be a time such as 2 o5 pm, make it say 2 o5 pm instead of 2 zero 5pm
-\b0([apAP][Mm])\b	O\1	0	1
-#if the aftermath of the number bug fixer is a time ending in 00, such as 3:00PM, make it say 3 PM instead of 3 00 PM
-\b00([apAP][mM])	\1	0	1
-II	 2 	1	2
-III	 3 	1	2
-IV	 4 	1	2
-VI	 6 	1	2
-VII	 7 	1	2
-VIII	 8 	1	2
-IX	 9 	1	2
-#mac OS10
-\bOS ?X\b	OS 10	1	1
-#if all caps spelling is on, ok would sound like o k, but this fixes that.
-OK	okay	1	1
-#all caps words are spelled, first regexp, for letter A
-([A-Z0-9]|-)A([A-Z0-9]|-)	\1 eh \2	1	0
-#all caps words are spelled, second regexp, for letter i
-([A-Z0-9]|-)I([A-Z0-9]|-)	\1 eye \2	1	0
-#all caps words are spelled, third regexp
-([A-Z])(?=[A-Z]){2,}	\1-	1	0
-#mister
-\bMr\.\s	`0 mister 	1	1
-#`0 misses
-\bMrs\.\s	misses 	1	1
-#miss
-\bMs\.\s	`0 miss 	1	1
-#doctor
-\bDr\.\s	`0 doctor 	1	1
-#skype thing
-([!?.]), sent	\1 sent	0	1
-#Crash|Cosp
-(anti|non|pre|re|un)cosp	\1kosp	0	1
-#Crash|Weird
-(t+)zsche	\1 z sche	0	1
-#Crash|Caesure
-(anti|non|pre|re|un)caesure	\1ceasure	0	1
-#kb/s
-\b(\d+)\s?KB(\/|p)s(ec|econd)?\b	\1 kilobytes per second	0	1
+﻿#kb/s
+\b(\d+)\s?KB(\/|p)s(ec|econd)?\b	\1 kilobytes per second	1	1
 #mb/s
-\b(\d+)\s?MB(\/|p)s(ec|econd)?\b	\1 megabytes per second	0	1
+\b(\d+)\s?MB(\/|p)s(ec|econd)?\b	\1 megabytes per second	1	1
 #b/s
-\b(\d+)\s?B(\/|p)s(ec|econd)?\b	\1 bytes per second	0	1
+\b(\d+)\s?B(\/|p)s(ec|econd)?\b	\1 bytes per second	1	1
 #kb
-\b(\d+)\s?KB\b	\1 kilobytes	0	1
+\b(\d+)\s?KB\b	\1 kilobytes	1	1
 #mb
-\b(\d+)\s?MB\b	\1 megabytes	0	1
+\b(\d+)\s?MB\b	\1 megabytes	1	1
 #b
-\b(\d+)\s?B\b	\1 bytes	0	1
+\b(\d+)\s?B\b	\1 bytes	1	1
 #GB
-\b(\d+)\s?GB\b	\1 gigabytes	0	1
-#gb/s, like that's a possibility
-\b(\d+)\s?GB(\/|p)s(ec|econd)?\b	\1 gigabytes per second	0	1
+\b(\d+)\s?GB\b	\1 gigabytes	1	1
+#gb/s
+\b(\d+)\s?GB(\/|p)s(ec|econd)?\b	\1 gigabytes per second	1	1
 #TB
-\b(\d+)\s?TB\b	\1 terabytes	0	1
+\b(\d+)\s?TB\b	\1 terabytes	1	1
 #PB
-\b(\d+)\s?PB\b	\1 Petabytes	0	1
+\b(\d+)\s?PB\b	\1 Petabytes	1	1
 #ZB
-\b(\d+)\s?ZB\b	\1 Zetabytes	0	1
+\b(\d+)\s?ZB\b	\1 Zetabytes	1	1
 #EB
-\b(\d+)\s?EB\b	\1 Exxa `0 Bytes	0	1
+\b(\d+)\s?EB\b	\1 Exxa `0 Bytes	1	1
 #YB
-\b(\d+)\s?YB\b	\1 Yottabytes	0	1
-#Crash|Euro
-(EUR[A-Z]+)(\d+)	\1 \2	1	1
-deja	`[.1de.2Zx]	0	2
-toed	tode	0	0
-begawk	`[.0bX.1gck]	0	0
+\b(\d+)\s?YB\b	\1 Yottabytes	1	1
 http://	ht `0 t p `0 colon `0 slash `0 slash 	0	0
 https://	ht teepee s `0 colon `0 slash `0 slash 	0	0
-c:\	c ̀0 colon ̀0 backslash 	0	0
+c:\	c `0 colon `0 backslash 	0	0
 2001	`0 twenty `0 o 1	0	2
 2002	`0 20 `0 o 2	0	2
 2003	`0 20 `0 o 3	0	2
@@ -86,17 +36,9 @@ c:\	c ̀0 colon ̀0 backslash 	0	0
 2007	`0 20 `0 o 7	0	2
 2008	`0 20 `0 o 8	0	2
 2009	`0 20 `0 o 9	0	2
-coehalgon	co ̀0 halgon	0	0
-protégé	protege	0	0
-cliché	cliche	0	0
-flummox	flummuhx	0	0
-Nico	Neeko	0	2
-omegle	`[.0x.1mi.0gxl]	0	0
-wifi	wi ̀0 fi	0	0
-winamp	`[.1wIn.0Amp]	0	0
-www.	www ̀0 dot 	0	0
-/	 ̀0 slash 	0	0
-m.facebook	m ̀0 dot facebook 	0	0
+www.	www `0 dot 	0	0
+/	 `0 slash 	0	0
+m.facebook	m `0 dot facebook 	0	0
 A\#	Eh Sharp	0	0
 C\#	C Sharp	0	0
 D\#	D Sharp	0	0
@@ -106,247 +48,164 @@ tis	`0 `[tXz]	0	2
 twould	`0 `[.twUd]	0	0
 þ	th	0	0
 þ 	þ	0	0
-imap	i ̀0 map	0	0
-Gryffindor	griffin ̀0 door	0	0
-hermione	hermiony	0	0
-remus	raemus	0	0
-seamus	shamus	0	0
-jaeger	yaygger	0	0
-slytherin	slihðerin	0	0
-dementor	de men ̀0 tor	0	0
-gunnel	gunnal	0	0
-shunpike	shun ̀0 pike	0	0
-dumbledore	dumble ̀0 door	0	0
-perdue	per doo	0	0
-hileo	heelio	0	0
 atm	ATM	0	2
-tthub	TT ̀0 hub 	0	0
-aucklander	aucklinder	0	0
-actumari	acta ̀0 marry	0	0
-Raxacoricofallapatorius	Racksa ̀0 corico ̀0 falla petorious	1	0
-.txt	 ̀0 dot txt 	0	0
-.rtf	 ̀0 dot rtf 	0	0
-.doc	 ̀0 dot d o c 	0	0
-.docx	 ̀0 dot d o c x 	0	0
-.ppt	 ̀0 dot ppt 	0	0
-.pptx	 ̀0 dot pptx 	0	0
-.xls	 ̀0 dot xls 	0	0
-.xlsx	 ̀0 dot xlsx 	0	0
-.odf	 ̀0 dot o d f 	0	0
-.wav	 ̀0 dot w ̀0 eh v 	0	0
-.ogg	 ̀0 dot ogg	0	0
-.mp3	 ̀0 dot mp3 	0	0
-.flac	 ̀0 dot flac 	0	0
-.aif	 ̀0 dot ̀0 eh ̀0 i f 	0	0
-.aifc	 ̀0 dot ̀0 eh ̀0 i ̀0 f c 	0	0
-.wma	 ̀0 dot ̀0 w ̀0 m eh 	0	0
-.opus	 ̀0 dot opus 	0	0
-.au	 ̀0 dot ̀0 eh u 	0	0
-.raw	 ̀0 dot raw 	0	0
-.snd	 ̀0 dot ̀0 s ̀0 n d 	0	0
-.mid	 ̀0 dot mid 	0	0
-.m3u	 ̀0 dot ̀0 m ̀0 3 u 	0	0
-.aspx	 ̀0 dot ̀0 eh ̀0 s ̀0 p x 	0	0
-.m4a	 ̀0 dot m4A 	0	0
-.mp2	 ̀0 dot mp2 	0	0
-.m4r	 ̀0 dot m4r 	0	0
-.m4v	 ̀0 dot m4v 	0	0
-.wmv	  ̀0 dot w ̀0 m v 	0	0
-.avi	 ̀0 dot eh ̀0 v i 	0	0
-.gif	 ̀0 dot gif 	0	0
-.tif	 ̀0 dot tif 	0	0
-.png	 ̀0 dot png 	0	0
-.jpg	 ̀0 dot j ̀0 p ̀0 g 	0	0
-.jpeg	 ̀0 dot j ̀0 peg 	0	0
-.mpeg	 ̀0 dot m ̀0 peg 	0	0
-mpeg	 m ̀0 peg 	0	0
-.bmp	 ̀0 dot bmp 	0	0
-.exe	 ̀0 dot e ̀0 x e 	0	0
-.msi	 ̀0 dot ̀0 m ̀0 s i 	0	0
-.ini	 ̀0 dot i ̀0 n i 	0	0
-.dll	  ̀0 dot dll 	0	0
-.mod	 ̀0 dot ̀0 mod 	0	0
-.hwz	 ̀0 dot hwz 	0	0
-.hwi	 ̀0 dot h ̀0 w i 	0	0
-.zip	 ̀0 dot zip 	0	0
-.7z	 ̀0 dot 7z 	0	0
-.rar	 ̀0 dot rar 	0	0
-.tar	 ̀0 dot tar 	0	0
-.tar.gz	 ̀0 dot tar ̀0 dot gz 	0	0
-.tar.gz2	 ̀0 dot tar ̀0 dot gz2 	0	0
-.cab	 ̀0 dot cab 	0	0
-.dmg	 ̀0 dot dmg 	0	0
-.app	 ̀0 dot app 	0	0
-.lnk	 ̀0 dot l ̀0 n k 	0	0
-.htm	 ̀0 dot htm 	0	0
-.html	 ̀0 dot h ̀0 t ̀0 m l 	0	0
-.xml	 ̀0 dot xml 	0	0
-.chm	 ̀0 dot chm 	0	0
-xul	x ̀0 u l 	0	2
-gprs	g ̀0 p ̀0 r s 	0	0
-HSPA	h ̀0 s ̀0 p eh 	0	0
-ADSl	eh ̀0 d ̀0 s l 	0	0
-vdsl	v ̀0 d ̀0 s l 	0	0
-markup	mark ̀0 up	0	0
-.lang	 ̀0 dot lang 	0	0
-.cfg	 ̀0 dot c ̀0 f g 	0	0
-.z5	 ̀0 dot z 5 	0	0
-.z8	 ̀0 dot z8 	0	0
-.blorb	 ̀0 dot blorb 	0	0
-.gblorb	  ̀0 dot g ̀0 blorb 	0	0
-.glulx	 ̀0 dot glulx 	0	0
-github	git ̀0 hub 	0	0
-.con	 ̀0 dot con	0	0
-.css	 ̀0 dot css 	0	0
-.xhtml	 ̀0 dot x ̀0 h ̀0 t ̀0 m l 	0	0
-xmpp	x ̀0 m pp 	0	0
-smtp	s ̀0 m tp 	0	0
-pop3	p ̀0 o p 3 	0	0
-te wai ponamu	 teh ̀0 wai po ̀0 na ̀0 moo	0	0
-maori	mau ̀0 ree	0	0
-aotearoa	ao ̀0 teh ̀0 uh roa	0	0
+tthub	TT `0 hub 	0	0
+Raxacoricofallapatorius	Racksa `0 corico `0 falla petorious	1	0
+.txt	 `0 dot txt 	0	0
+.rtf	 `0 dot rtf 	0	0
+.doc	 `0 dot d o c 	0	0
+.docx	 `0 dot d o c x 	0	0
+.ppt	 `0 dot ppt 	0	0
+.pptx	 `0 dot pptx 	0	0
+.xls	 `0 dot xls 	0	0
+.xlsx	 `0 dot xlsx 	0	0
+.odf	 `0 dot o d f 	0	0
+.wav	 `0 dot w `0 eh v 	0	0
+.ogg	 `0 dot ogg	0	0
+.mp3	 `0 dot m `0 p 3 	0	0
+.flac	 `0 dot flac 	0	0
+.aif	 `0 dot `0 eh `0 i f 	0	0
+.aifc	 `0 dot `0 eh `0 i `0 f c 	0	0
+.wma	 `0 dot `0 w `0 m eh 	0	0
+.opus	 `0 dot opus 	0	0
+.au	 `0 dot `0 eh u 	0	0
+.raw	 `0 dot raw 	0	0
+.snd	 `0 dot `0 s `0 n d 	0	0
+.mid	 `0 dot mid 	0	0
+.m3u	 `0 dot m `0 3 u 	0	0
+.aspx	 `0 dot `0 eh `0 s `0 p x 	0	0
+.m4a	 `0 dot m4A 	0	0
+.mp2	 `0 dot m `0 p 2 	0	0
+.m4r	 `0 dot m4r 	0	0
+.m4v	 `0 dot m4v 	0	0
+.wmv	  `0 dot w `0 m v 	0	0
+.avi	 `0 dot eh `0 v i 	0	0
+.gif	 `0 dot gif 	0	0
+.tif	 `0 dot tif 	0	0
+.png	 `0 dot png 	0	0
+.jpg	 `0 dot j `0 p `0 g 	0	0
+.jpeg	 `0 dot j `0 peg 	0	0
+.mpeg	 `0 dot m `0 peg 	0	0
+mpeg	 m `0 peg 	0	0
+.bmp	 `0 dot bmp 	0	0
+.exe	 `0 dot e `0 x e 	0	0
+.msi	 `0 dot `0 m `0 s i 	0	0
+.ini	 `0 dot i `0 n i 	0	0
+.dll	  `0 dot dll 	0	0
+.mod	 `0 dot mod 	0	0
+.hwz	 `0 dot hwz 	0	0
+.hwi	 `0 dot h `0 w i 	0	0
+.zip	 `0 dot zip 	0	0
+.7z	 `0 dot 7z 	0	0
+.rar	 `0 dot rar 	0	0
+.tar	 `0 dot tar 	0	0
+.tar.gz	 `0 dot tar `0 dot gz 	0	0
+.tar.gz2	 `0 dot tar `0 dot gz2 	0	0
+.cab	 `0 dot cab 	0	0
+.dmg	 `0 dot dmg 	0	0
+.app	 `0 dot app 	0	0
+.lnk	 `0 dot l `0 n k 	0	0
+.htm	 `0 dot h `0 t m 	0	0
+.html	 `0 dot h `0 t `0 m l 	0	0
+.xml	 `0 dot x `0 m l 	0	0
+.chm	 `0 dot chm 	0	0
+xul	x `0 u l 	0	2
+gprs	g `0 p `0 r s 	0	0
+HSPA	h `0 s `0 p eh 	0	0
+ADSl	eh `0 d `0 s l 	0	0
+vdsl	v `0 d `0 s l 	0	0
+markup	mark `0 up	0	0
+.lang	 `0 dot lang 	0	0
+.cfg	 `0 dot c `0 f g 	0	0
+.z5	 `0 dot z 5 	0	0
+.z8	 `0 dot z8 	0	0
+.blorb	 `0 dot blorb 	0	0
+.gblorb	  `0 dot g `0 blorb 	0	0
+.glulx	 `0 dot glulx 	0	0
+github	git `0 hub 	0	0
+.con	 `0 dot con	0	0
+.css	 `0 dot css 	0	0
+.xhtml	 `0 dot x `0 h `0 t `0 m l 	0	0
+xmpp	x `0 m pp 	0	0
+smtp	s `0 m tp 	0	0
+pop3	p `0 o p 3 	0	0
+te wai ponamu	 teh `0 wai po `0 na `0 moo	0	0
+maori	mau `0 ree	0	0
+aotearoa	ao `0 teh `0 uh roa	0	0
 songr	songer	0	0
-gmail	g ̀0 mail 	0	0
 mousepad	mouse pad 	0	0
 panicy	panicky 	0	0
 dvorak	de vorak	0	0
-redhead	red ̀0 hed 	0	0
+redhead	red `0 hed 	0	0
 feathy	fehðy	0	0
-o.w.l	o ̀0 w l 	0	0
-o.w.l.s	o ̀0 w l's 	0	0
-youtube	yoo ̀0 toob 	0	0
-youtu.be	yoo ̀0 tube 	0	0
-sayonder	s ̀0 eh yonder 	0	0
-tbrn	t ̀0 b ̀0 r n 	0	0
-m.twitter	m ̀0 dot twitter 	0	0
-touch.facebook	touch ̀0 dot facebook 	0	0
-.google	 ̀0 dot google 	0	0
-.onj.me	 ̀0 dot onj ̀0 dot mee 	0	0
-.andrelouis	 ̀0 dot ̀0 andre lui 	0	0
-.tbrn	 ̀0 dot t ̀0 b ̀0 r n 	0	0
-.apple	 ̀0 dot apple 	0	0
-.googleads	 ̀0 dot google ̀0 adds 	0	0
-bandcamp	band ̀0 camp	0	0
-.bandcamp	 ̀0 dot band ̀0 camp 	0	0
-paypal	pay ̀0 pal	0	0
-.skype	 ̀0 dot skype 	0	0
+o.w.l	o `0 w l 	0	0
+o.w.l.s	o `0 w l's 	0	0
+youtu.be	yootoo  `0 dot bee 	0	0
+sayonder	s `0 eh yonder 	0	0
+tbrn	t `0 b `0 r n 	0	0
+m.twitter	m `0 dot twitter 	0	0
+touch.facebook	touch `0 dot facebook 	0	0
+.google	 `0 dot google 	0	0
+.onj.me	 `0 dot onj `0 dot mee 	0	0
+.andrelouis	 `0 dot `0 andre lui 	0	0
+.tbrn	 `0 dot t `0 b `0 r n 	0	0
+.apple	 `0 dot apple 	0	0
+.googleads	 `0 dot google `0 adds 	0	0
+bandcamp	band `0 camp	0	0
+.bandcamp	 `0 dot band `0 camp 	0	0
+paypal	pay `0 pal	0	0
+.skype	 `0 dot skype 	0	0
 eirs	air's	0	2
 eirself	`00 `[.1Er.2sElf]	0	2
 jeirself	`00 `[.1JEr.2sElf]	0	2
 neirself	`00 `[.1nEr.2sElf]	0	2
 peh's	pay's	0	2
 zes	zees	0	2
-  list	  ̀0 list 	0	0
-faraday	farra ̀0 day	0	0
-tika	teeka	0	0
-libriomancer	leebria ̀0 mancer	0	0
-libriomancy	`[.1lib.0ri.0x.0mxn.0si]	0	0
-dozenal	duzzenal	0	2
-onezen	wunzen	0	0
-sevenzen	`[.1sEv.0Xn.0zXn]	0	0
-eightzen	aitdzen	0	0
-ninezen	neinzen	0	0
-deczen	dekzen	0	0
-sevendo	`[.1sEv.0Xn.0do]	0	0
-ninedo	neindo	0	0
-zendred	zendrid	0	0
-panem	pan ̀0 em	0	2
+  list	  `0 list 	0	0
+panem	pan `0 em	0	2
 Magie	Maggy	0	0
-huawei	hwa ̀0 way	0	2
-Doherty	doh ̀0 erty	0	0
-aleron	alla ̀0 ron	0	2
-igor	ee ̀0 gor	0	2
 W.U.L.F.	wulf	0	0
-Quara	kwahra	0	2
-Quim	Keem	0	2
-Novinha	Noveenya	0	2
-Zenador	Zenna ̀0 dor	0	2
-Zenadores	Zenna ̀0 dors	0	2
-Pipo	Peepo	0	2
-Libo	Leebo	0	2
-Uanda	Wanda	0	2
-bosquinha	boskeenya	0	2
-porquinhos	porkeenyos	0	2
-raman	raamaan	0	0
-framling	fraamling	0	0
-morrighan	morrigon	0	2
-Karkat	kar ̀0 kat	0	0
-Gamzee	gamzy	0	0
-nepeta	`[.1nE.0pItx]	0	0
-sollux	solicks	0	0
-kurloz	kurl ̀0 oss	0	0
-kanaya	can aia	0	0
-ianto	yaanto	0	0
-feferi	feffery	0	0
-equius	ekwius	0	0
-paracettamol	parasetta ̀0 mawl	0	0
-alyx	alex	0	2
-transgender	tranz ̀0 gender	0	0
-agender	eh ̀0 gender	0	0
+Karkat	kar `0 kat	0	0
+kurloz	kurl `0 oss	0	0
+paracettamol	parasetta `0 mawl	0	0
+transgender	tranz `0 gender	0	0
+agender	eh `0 gender	0	0
 aromanticity	`0 eh `0 ro `0 man ticity	0	0
-cisgender	cis ̀0 gender	0	0
+cisgender	cis `0 gender	0	0
 cishet	cis het	0	0
 OW	O W	1	2
 IW	i w	1	2
-taleswapper	tale ̀0 swapper	0	0
-pangender	pan ̀0 gender	0	0
-bigender	bi ̀0 gender	0	0
+taleswapper	tale `0 swapper	0	0
+pangender	pan `0 gender	0	0
+bigender	bi `0 gender	0	0
 maryse	mey `0 `[rXs]	0	2
-morgenstern	morgan ̀0 stern	0	0
-has autocomplete	autocomplete	0	0
-shadowhunter	shadow ̀0 hunter	0	0
-shadowhunting	shadow ̀0 hunting	0	0
-Alec	allic	0	0
-inquisitor	inquizitor	0	0
-pennyroyal	penny ̀0 royal	0	0
+shadowhunter	shadow `0 hunter	0	0
+shadowhunting	shadow `0 hunting	0	0
+pennyroyal	penny `0 royal	0	0
 TE	T E	1	2
-decrow	de crow	0	0
 DID	d i d	1	2
-uber	oober	0	0
 tienjing	tien jing	0	0
-odin	odan	0	2
-batmunhk	`[.1bat.0mUGk]	0	0
-arkangel	arc ̀0 angel	0	0
-aviatrix	avia ̀0 trix	0	0
-aviatrices	avia ̀0 `[.1trX.0siz]	0	0
-voldemort	volda ̀0 mort	0	0
-anus	aynus	0	0
-yeah	`[.1yEx]	0	0
+arkangel	arc `0 angel	0	0
 detune	`0 dee tune	0	0
-polux	`[.1pal.0xks]	0	0
-#Hurtz
-\b(\d+)\s?hz\b	\1hurtz	0	1
-#Kilahurts
-\b(\d+)\s?KHZ\b	\1Kilahurtz	0	1
-#Megahurtz
-\b(\d+)\s?MHZ\b	\1megahurtz	0	1
-#Gigahurtz
-\b(\d+)\s?GHZ\b	\1Gigahurtz	0	1
+#Hertz
+\b([0-9,.]+)\s?hz\b	\1 hertz	0	1
+#Kilohertz
+\b([0-9.]+)\s?KHz\b	\1 kilohertz	0	1
+#Megahertz
+\b([0-9.]+)\s?MHz\b	\1 megahertz	0	1
+#Gigahertz
+\b([0-9.]+)\s?GHz\b	\1 gigahertz	0	1
 #kilometers per hour
 \b(\d+)\s?KM(\p|/)h?\b	\1kilometers per hour	0	1
-XI	 11 	0	2
-XII	 12 	0	2
 iframe	i `0 frame 	0	0
 soyourelikethat	so you are like that	0	0
-(	`vb60 	0	0
-)	 `vb65	0	0
-  grouping	  ̀0 group	0	0
-  link	  ̀0 link	0	0
-PM	 ̀0 p m	0	2
-AM	 ̀0 A M	1	2
-  tool bar	  ̀0 tool ̀0 bar	0	0
-  blank		0	0
-xorg	X ̀0 org	0	0
-xargs	x ̀0 args	0	0
-alexandra	`[.0Al.0Xg.1zAn.0drx]	0	2
-alexandria	`0 `[.0Al.1xgz] andria	0	0
-alexandrov	`0 `[.0Al.1xgz] androv	0	0
-Calliope	`[.0kX.1lY.0x.2pi]	0	0
-  property page	  properties	0	0
-kiwiness	`[.1ki.0wi.2nxs]	0	0
-benedict	`[.1bEn.0x.2dIkt]	0	2
-cumberbatch	`[.1kHm.0bR.2bAC]	0	0
-isopropyl	`[.1Ys.0x.1pro.2pxl]	0	0
+  grouping	  `0 group	0	0
+  link	  `0 link	0	0
+PM	 `0 p m	0	2
+AM	 `0 A M	1	2
+  tool bar	  `0 tool `0 bar	0	0
+xorg	X `0 org	0	0
+xargs	x `0 args	0	0
 helium-3	`0 helium 3 	0	0
 helium-4	`0 helium 4 	0	0
 uranium-235	uranium 2 `0 30 5 	0	0
@@ -355,11 +214,9 @@ carbon-12	`0 carbon 12	0	0
 carbon-13	`0 carbon 13 	0	0
 carbon-14	`0 carbon 14 	0	0
 uranium-239	uranium 2 `0 30 9 	0	0
-isotope	aisa `0 tope	0	0
 half-life	half `0 life	0	2
 half-lives	half `0 lyves	0	2
 (s)	s	0	0
-formulae	`[.1fcrm.0yx.2le]	0	2
 copresence	co `0 presence	0	2
 wang-mu	`0 wahng moo	0	0
 Han Fei-tzu	`0 `[.han] `1 `[.1fe.2tsx]	0	0
@@ -367,126 +224,52 @@ Han Qing-jao	`0 `[.han] `[.0CiG.1JyW]	0	0
 Li Qing-jao	`āl `[.li] `[.0CiG.1JyW]	0	0
 Hegemon	`[.1hEJ.0x.2man]	0	2
 Qing-jao	`[.0CiG.1JyW]	0	0
-aiúa	`0 ai ooa	0	0
 Os Filhos da Mente de Cristo	`l7 Os Filhos da Mente de Cristo `l1 	0	0
-filhos	`[.1fil.2yos]	0	0
-Estevão	`[.0EsdE.1vWG]	0	0
-jakt	yaakt	0	0
-hegemony	`[.0hX.1JE.0mx.2ni]	0	2
-samoan	`[.0sx.1moXn]	0	2
-tonga	`[.1ta.0Gx]	0	2
-tongan	`[.1ta.0Gxn]	0	2
-fijian	`[.0fi.1Ji.0xn]	0	2
-tongans	`[.1ta.0Gxnz]	0	2
 Lumana'i	`[.1lu.0mx.1na.0?i]	0	2
 na'vi	`[.1na.0?vi]	0	2
-fritschle	`[.1fritS.0lx]	0	2
-plikt	pleekt	0	0
 themself	`0 `[.0Dxm.1sElf]	0	2
-mycroft	`[.1mY.2krcft]	0	0
-lestrade	le straad	0	0
-samoans	`[.0sx.1moXnz]	0	2
-eduardo	edwardo	0	2
-hia	haia	0	2
-selfie	selfy	0	2
-selfies	sellfeez	0	2
-mendez	`[.1mEn.0dEz]	0	0
-whanau	`[.1fa.0no]	0	0
-umatilla	`0 ooma tilla	0	2
-kanyia	`[.0kx.1nYx]	0	2
-stefani	stefiny	0	2
-kaikoura	`[.0kY.1ko] `0 `[.rx]	0	2
-Kaikōura 	`[.0kY.1ko] `0 `[.rx]	0	2
-halsey	`[.1hAl.0zi]	0	2
-ariana	`[.1a.0ri.1a.0nx]	0	2
-grande	graanday	0	2
-fraser	frazer	0	2
-eminem	`[.1Em.0Xn.2Em]	0	2
-martinez	`[.0mar.1ti.0nEz]	0	2
 opensouls	open souls	0	2
 Ott	O T T	1	2
 PYT	P Y T	1	2
 dosbox	dos `0 box	0	0
 OitNB	O I T N B	1	2
-audy	owdy	0	2
-dodecahedron	`[.1do.0dE.0kx.1hi.2dran]	0	2
-dodecahedrons	`[.1do.0dE.0kx.1hi.2dranz]	0	0
-zaphod	zayfod	0	0
-dani	danny	0	0
 CCing	`0 see seeing	0	0
 hunger games	hunger `0 games	0	0
-beetee	beety	0	0
 mockingjay	mocking `0 jay	0	0
-holo	hollo	0	2
-avox	`[.1e.2vaks]	0	2
-avoxes	`[.1e.0vak.0sXz]	0	2
 tracker jacker	trackerjacker	0	0
-sydenham	sidnam	0	0
-wannabe	wana be	0	0
-cassidee	casidy	0	0
-clara	claara	0	0
-plutarch	plu `0 tark	0	0
 chch	Christchurch	0	0
 ACL	Auckland	1	2
-cupros	coo `0 pross	0	0
-motueka	`[.1mc.0tu.1e.0kx]	0	0
 Ǵecko 	gecko	0	0
-geckoson	`[.1gE.0ko.0sXn]	0	0
-nichole	`[.0nX.1kol]	0	0
-allee	`0 ah lee	0	0
-micah	meeka	0	0
 milkshake	milk `0 shake	0	0
-sheehan	`[.1Si.0han]]	0	0
-ratliff	`[.1rAt.0lIf]	0	0
 rehab	re `0 hab	0	0
-terronez	`[.0tE.1ro.0nEz]	0	0
-ngo	`[.1Go]	0	2
-Flyorra	`[.0fli.1cr.0x]	0	0
 awww	auw	0	0
-malcy	`[.1mAl.0ki]	0	2
 Supercalifragilisticexpialidocious	super `0 kalla frajjalistic `0 expi `0 allih docious	0	0
-Seguin	Segwin	0	0
-kamelot	`[.1kAm.0x.2lat]	0	0
 xb1	Crossbar 1	0	2
 xb5	Crossbar 5	0	2
 \#1A	1 eh 	0	2
 ESS	E S S	1	2
-Wegener	wayghner	0	0
-Tiffani	tifany	0	0
 inworld	inn `0 world	0	0
 outworld	out `0 world	0	0
 in world	inn `0 world	0	0
 out world	out `0 world	0	0
-pentatonix	`[.0pEn.0tx.1tan.0Xks]	0	0
 gulab jamon	goolaab jaaman	0	0
 shitpost	shit `0 post	0	0
 schwiftpost	shwift `0 post	0	0
-hailee	`[.1he.0li]	0	0
-Gallifrey	`[.1gAl.0x.2fre]	0	2
-Gallifreyan	`[.0gAl.0x.1fre.0Xn]	0	0
 genderqueer	gender queer	0	0
 genderfluid	gender fluid	0	0
 #mix
 \bMx\.\s	`00 mix 	0	1
-Loveys	Luvvies	0	0
 Mao Mao	Mao `0 Mao	0	0
-Windser	Winzer	0	0
 dryad	dry `0 add	0	0
-Charisse	shereese	0	0
-kimy	kimmy	0	0
 bichord	bi `0 chord	0	0
 trichord	tri `0 chord	0	0
 feath	feð	0	2
 snapdragon	snap `0 dragon	0	0
-misha	meesha	0	2
-rhys	reese	0	0
 javascript	java `0 script	0	0
 xor	x `0 or	0	0
 common room	common `0 room	0	0
 Xbox	x `0 box	0	0
 chuizai	tshway `0 zai	0	0
-Caraml	caramel	0	0
-douche	doosh	0	2
 douchecanoe	doosh canoe	0	2
 douchecannon	doosh `0 cannon	0	2
 douchebag	doosh `0 bag	0	2
@@ -495,75 +278,19 @@ bojack	bo `0 jack	0	2
 les miserables	`as lay `af `[.0mIz.0X.1ra.0blx]	0	0
 nzherald	n zed herald	0	0
 Coca-Cola	`0 coca cola	0	2
-manurewa	`0 maanu raywa	0	0
 Dunedin	`0 dun Eden	0	0
-marama	`[.1ma.0rx.2ma]	0	0
-dozenth	Duzzenth	0	2
-tenancy	tennency	0	0
-tenancies	tennencies	0	0
+loveys	luvvies	0	2
+tenancy	tennency	0	2
+tenancies	tennencies	0	2
 tenancy agreement	tennency `0 agreement	0	2
-sophocles	`[.1saf.0x.2kliz]	0	0
-hamartia	`[.0hx.0mar.1tix]	0	0
-tardyon	`[.1tard.0i.2an]	0	2
-tachyon	`[.1tAk.0i.2an]	0	2
-meson	`[.1mi.0zan]	0	2
-gluon	`[.1glu.0an]	0	2
-tachyons	`[.1tAk.0i.2anz]	0	2
-tardyons	`[.1tar.0di.2anz]	0	2
-gluons	`[.1glu.0anz]	0	2
-mesons	`[.1mi.0zanz]	0	2
-castiel	`[.0kAs.0ti.1El]	0	0
 goddamnit	goddamn it	0	0
-Daenerys	`[.0dX.1nEr.0Xs]	0	0
-Dison	`[.1dY.0sxn]	0	2
-moana	`[.0mx.1wa.0nx]	0	0
-Larouche	le roosh	0	2
-tatiana	`[.0tat.0i.1a.0nx]	0	0
-economides	`ad  `[.0Xk.1an.0x1mi.0dEs]	0	0
-bunion	`[.1bHn.0yXn]	0	0
-Pinham	`[.1pIn.0Xm]	0	0
-Jono	Jonno	0	0
-Nikau	Neeko	0	0
-nanotwinned	`[.1nAn.0o.2twYnd]	0	0
-nitride	`[.1nYt.2rYd]	0	0
-flamethrower	`[.1flem.2TroR]	0	0
-zucced	zucked	0	0
-zuccing	zucking	0	0
-Leslie	`[.1lEz.0li]	0	0
+economides	`ad  `[.0Xk.1an.0x1mi.0dEs]
 Havasnack	`[.1hAv.0x.2snAk]	1	0
-javert	`[.0Zx1vEr]	0	0
-enjolras	`[.1cn.1Zxl.1ra]	0	0
-anarcho	`[.1An.0ar.0ko]	0	0
-bangarang	`[.1bAG.0x.2rAG]	0	0
-altair	`[.0cl.1tEr]	0	2
-Leong	`[.0le.1cG]	0	2
-mentat	`[.1mEn.0tAt]	0	2
-christy	`[.1krI.0sti]	0	0
-hoptoad	`[.1hap.2tod]	0	0
-rigamarole	`[.1rIg.0x.0mx.2rol]	0	0
-kowabunga	`[.0kW.0x.1bHG.0gx]	0	0
-jimla	jim `0 lah	0	0
 McLellan	`[.0mxk.1lEl.0xn]	0	2
-plumbus	`[.1plHm.0bxs]	0	0
-plumbuses	`[.1plHm.0bxs.0xz]	0	0
-Leslie's	`[.1lEz.0liz]	0	0
-Shosha	`[.1So.0Sx]	0	2
 Mohrenschildt 	morron `0 shilt	0	2
 McLelland	`[.0mXk.1lEl.0xnd]	0	2
-conchord	`[.1kan.2kcrd]	0	2
-conchords	`[.1kan.2kcrdz]	0	0
-papanui	`[.0pa.0px.1nu.0i]	0	0
-Tarzan	`[.1tar.2zAn]	0	0
-mentats	`[.1mEn.0tAts]	0	2
-gingey	jinjy	0	2
-dalilah	delilah	0	0
-mentos	`[.1mEn.2tcs]	0	0
-Jhonas	jonas	0	0
-muslim	`[.1mUz.2lxm]	0	0
 iflscience	i `0 f l science	0	0
 androidcentral	`0 android central	0	0
-ngati	`[.1Ga.2ti]	0	0
-iwi	`[.1i.2wi]	0	2
 snackbar	snack `0 bar	0	0
 gunslinger	gun `0 slinger	0	0
 Blenheim	`[.1blEn.0xm]	0	0
